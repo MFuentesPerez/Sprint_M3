@@ -21,7 +21,7 @@ for nombre in nombres_usuarios:
 
 # Pedir número telefónico para cada cuenta
 while True:
-    todas_tienen_numero = True
+    todas_tienen_numero = True #Flag de control
     for nombre, cuenta in cuentas_usuarios.items():
         if 'telefono' not in cuenta: # Verifica key telefono en cada cuenta de usuario para agregarla si no existe
             todas_tienen_numero = False
@@ -37,4 +37,4 @@ while True:
 # Imprimir cuentas de usuarios con sus respectivos números telefónicos
 print("\nCuentas de usuarios con números telefónicos:")
 for nombre, cuenta in cuentas_usuarios.items():
-    print(f"Usuario: {nombre}, Contraseña: {cuenta['contraseña']}, Número telefónico: {cuenta.get('telefono')}") 
+    print(f"Usuario: {nombre}, Contraseña: {cuenta.get('contraseña')}, Número telefónico: {cuenta.get('telefono')}") 
